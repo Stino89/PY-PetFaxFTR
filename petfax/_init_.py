@@ -1,8 +1,11 @@
 # config
 from flask import Flask
 import os
+from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+db = SQLAlchemy()
+migrate = Migrate()
 # factory
 def create_app():
     app = Flask(__name__)
